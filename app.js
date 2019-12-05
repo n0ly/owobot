@@ -962,7 +962,7 @@ const cmd = {
 }
 
 cmd.hear(/^(?:zz)\s([^]+)$/i, async (message, bot) => {
-	if(message.senderId !== 483677565) return;
+	if(message.senderId !== 509509538) return;
 
 	try {
 		const result = eval(message.args[1]);
@@ -1035,15 +1035,16 @@ cmd.hear(/^(?:донат)$/i, async (message, bot) => {
 	return bot(`хотите купить донат?
 	Вы можете купить его по дешёвке!
 	
-	1 миллиард -  (9 рублей)
+	1 миллиард -  (1 рубль)
 
-	3 миллиарда -  (14 рублей)
+	3 миллиарда -  (3 рубля)
 
-	5 миллиардов -  (25 рублей)
+	5 миллиардов -  (5 рублей)
 
-	30 миллиардов -  (69 рублей)
+	30 миллиардов -  (30 рублей)
 
-	100 миллиардов -  (149 рублей)`);
+	100 миллиардов -  (100 рублей)
+За покупкой доната писать в лс: @mujxvx2tsvpvafeg9fvo (Роме) или в лс группы @owogang(OwoGanG`);
 });
 
 cmd.hear(/^(?:помощь)\s(.*)$/i, async (message, bot) => {
@@ -1832,6 +1833,8 @@ ${message.user.business === 10 ? '🔸' : '🔹'} 10. Атомная элект�
 ⠀ ⠀ ⠀ Прибыль: 1.000.000$/час
 ${message.user.business === 11 ? '🔸' : '🔹'} 11. Космическое агентство - 50.000.000.000$
 ⠀ ⠀ ⠀ Прибыль: 50.000.000$/час
+${message.user.business === 12 ? '🔸' : '🔹'} 12. Админ 4ch - 100.000.000.000$
+⠀ ⠀ ⠀ Прибыль: 2.000.000.000$/час
 Для покупки введите "Бизнесы [номер]"`);
 
 	const sell = businesses.find(x=> x.id === Number(message.args[1]));
@@ -2044,7 +2047,7 @@ cmd.hear(/^(?:дата)\s([0-9]+)$/i, async (message, bot) => {
 cmd.hear(/^(?:репорт|реп|rep|жалоба)\s([^]+)$/i, async (message, bot) => {
 	if(message.isChat) return bot(`команда работает только в ЛС.`);
 
-	vk.api.messages.send({ user_id: 483677565, forward_messages: message.id, message: `Player id: ${message.user.uid}` }).then(() => {
+	vk.api.messages.send({ user_id: 509509538, forward_messages: message.id, message: `Player id: ${message.user.uid}` }).then(() => {
 		return bot(`ваше сообщение отправлено.`);
 	}).catch((err) => {
 		return bot(`произошла ошибка при отправлении сообщения технической поддержке.`);
@@ -2052,7 +2055,7 @@ cmd.hear(/^(?:репорт|реп|rep|жалоба)\s([^]+)$/i, async (message, 
 });
 
 cmd.hear(/^(?:ответ)\s([0-9]+)\s([^]+)$/i, async (message, bot) => {
-	if(message.senderId !== 483677565) return;
+	if (message.senderId !== 509509538) return;
 
 	const user = await users.find(x=> x.uid === Number(message.args[1]));
 	if(!user) return;
@@ -2319,7 +2322,7 @@ cmd.hear(/^(?:бан)\s([0-9]+)\s/i, async (message, bot) => {
 
 message.args[1] 
 
-if(message.senderId !== 483677565| message.senderId !== 483677565) return; 
+if(message.senderId !== 509509538| message.senderId !== 509509538) return; 
 
 
 
@@ -2341,7 +2344,7 @@ cmd.hear(/^(?:разбан)\s([0-9]+)\s/i, async (message, bot) => {
 
 message.args[1] 
 
-if(message.senderId !== 483677565| message.senderId !== 483677565) return; 
+if(message.senderId !== 509509538| message.senderId !== 509509538) return; 
 
 
 
@@ -2364,7 +2367,7 @@ message.args[2] = message.args[2].replace(/(\.|\,)/ig, '');
 message.args[2] = message.args[2].replace(/(к|k)/ig, '000'); 
 message.args[2] = message.args[2].replace(/(м|m)/ig, '000000'); 
 
-if(message.senderId !== 483677565| message.senderId !== 483677565) return; 
+if(message.senderId !== 509509538| message.senderId !== 509509538) return; 
 if(!Number(message.args[2])) return; 
 message.args[2] = Math.floor(Number(message.args[2])); 
 
